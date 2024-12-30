@@ -1,35 +1,16 @@
-
 import './App.css';
-
-// const click = (nice) => {
-//   console.log(nice);
-// }
-// const [state, setState] = useState(["test", 1, 4]);
-
-// const updatestate = () => {
-//   const newState = state.map((useState) => {
-//   if(useState === 1) {
-//       return useState
-//       }
-//     });
-//     setState(newState);
-//   };
-//   updatestate();
-
-
-
+import Counter from './components/counter';
+import Input from './components/input';
+import Moods from './components/moods';
+import Programmers from './components/programmers'
+import Spinner from './components/spinner'
+import Squares from './components/squares'
 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div>this is my state {state}</div>
-        <p class = "font-bold">hello world</p>
-        <button onClick={click}>click me</button>
-      </header>
-    </div>
-  );
+  return <div className="App">Import Each component to app <Counter/> <Input/> <Moods/> <Programmers/> <Spinner/> <Squares/></div>;
+  
+
 }
 
 export default App;
