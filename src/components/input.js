@@ -33,8 +33,8 @@ STEP 6:
   For the input to reset correctly, it needs to "drink" its value from state!
   We need to add an extra prop to the input element like so: value={inputValue}
 */
-
-import React from "react"; /* STEP 0 */
+import React, { useState } from "react";
+// import React from "react"; /* STEP 0 */
 
 export default function Input() {
   /* STEP 1 */
@@ -48,19 +48,33 @@ export default function Input() {
 
   const style = {
     fontSize: "1.5em",
-    marginBottom: "0.3em",
+    marginBottom: "0.3em", 
   };
+
+  const [inputValue, setInputValue] = useState(""); 
+
+const handleChange = (e) => {
+  console.log(e);
+  console.log(e.target);
+  console.log(e.target.value);
+  setInputValue(e.target.value)  
+}
+const resetbutton = () => {
+  
+}
 
   return (
     <div className="widget-input container">
       <h2>Input</h2>
-      <div style={style}></div>
+      <div style={style}>
+        {inputValue}
+      </div>
 
       {/* STEP 3 */}
       <div>
-        <input type="text" />
+        <input type="text" value={inputValue} onChange={handleChange}/>
         {/* STEP 6 */}
-        <button>Reset</button>
+        <button onClick={resetbutton}>Reset</button>
       </div>
     </div>
   );

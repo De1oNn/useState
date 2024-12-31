@@ -8,9 +8,7 @@ import Squares from './components/squares'
 
 
 function App() {
-  return <div className="App">Import Each component to app <Counter/> <Input/> <Moods/> <Programmers/> <Spinner/> <Squares/></div>;
-  
-
+  return  <div className="App">Import Each component to app <Counter/> <Input/> <Moods/> <Programmers/> <Spinner/> <Squares/></div>;
 }
 
 export default App;
