@@ -46,10 +46,7 @@ export default function Input() {
 
   /* STEP 5 */
 
-  const style = {
-    fontSize: "1.5em",
-    marginBottom: "0.3em", 
-  };
+
 
   const [inputValue, setInputValue] = useState(""); 
 
@@ -60,9 +57,13 @@ const handleChange = (e) => {
   setInputValue(e.target.value)  
 }
 const resetbutton = () => {
-  
+  setInputValue("");
 }
-
+const style = {
+  fontSize: "1.5em",
+  marginBottom: "0.3em", 
+  color: inputValue.length < 10 ? "blue" : "red",
+};
   return (
     <div className="widget-input container">
       <h2>Input</h2>
