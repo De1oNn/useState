@@ -10,7 +10,6 @@ We can only feature one awesome programmer at a time.
 
 Find comments below to help you along.
 */
-
 import React, { useState } from "react";
 
 // Use this variable ONLY to initialize a slice of state!
@@ -23,11 +22,19 @@ const listOfAwesome = [
   { id: "5", name: "Frances Allen" },
   { id: "6", name: "Carol Shaw" },
 ];
+const first = listOfAwesome.map(item => item)[0]
+const second = listOfAwesome.map(item => item)[1]
+const third = listOfAwesome.map(item => item)[2]
+const fourth = listOfAwesome.map(item => item)[3]
+const fifth = listOfAwesome.map(item => item)[4]
+const sixth = listOfAwesome.map(item => item)[5]
+
 
 export default function Programmers() {
+  
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers on the one hand, and the id of the featured programmer on the other.
-
+  const [string, setstring] = useState(listOfAwesome);
   const getNameOfFeatured = () => {
     // This is not an event handler but a helper function. See its usage below.
     // It's going to need information from both slices of state!
@@ -40,19 +47,39 @@ export default function Programmers() {
     marginTop: "0.5em",
     color: "royalblue", // 🤔
   };
+  function firstname() {
+    setstring(string);
+  }
+  function secondname() {
+    setstring(string)
+  }
+  function thirdname() {
+
+  }
+  function fourthname() {
+
+  }
+  function fifthname() {
+
+  }
+  function sixthname() {
+
+  }
 
   return (
     <div className="widget-programmers container">
       <h2>Programmers</h2>
-      <div className="programmers">
-        {/* Nasty bug! We should map over a slice of state, instead of 'listOfAwesome'.
-          We might say: "it works, though!" But if the list of programmers is not state,
-          we could never add or edit programmers in the future. The list would be a static thing. ;)" */}
+      <div className="programmers"
+      > 
+        <button onClick={firstname}>{first.name}</button>
+        <button onClick={secondname}>{second.name}</button>
+        <button onClick={thirdname}>{third.name}</button>
+        <button onClick={fourthname}>{fourth.name}</button>
+        <button onClick={fifthname}>{fifth.name}</button>
+        <button onClick={sixthname}>{sixth.name}</button>
       </div>
       <div>
-        {/* // Ternaries are fantastic to render "one thing or the other" depending
-        on the "truthiness" of something. // Pseudo-code: if the currently
-        featured id is truthy render div 1, otherwise render div 2. Fix! */}
+        
       </div>
     </div>
   );

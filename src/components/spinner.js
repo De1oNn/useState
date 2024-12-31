@@ -44,14 +44,20 @@ export default function Spinner() {
 
   /* STEP 4 */
   const test = {};
-
+const {spinnerOn, setSpinnerOn} = useState(4);
+function hide () {
+  
+}
+function show() {
+  
+}
   return (
     <div className="widget-spinner container">
       <h2>Spinner</h2>
       {<div className="spinner">--+--</div> /* STEP 2 */}
 
-      <button>Hide Spinner</button>
-      <button>Show Spinner</button>
+      <button onClick={hide}>Hide Spinner</button>
+      <button onClick={show}>Show Spinner</button>
     </div>
   );
 }
