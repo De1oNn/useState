@@ -63,7 +63,6 @@ export default function Counter() {
   }
   const decrementclick = () => {
     setNumber(number - 1);
-    setNumber(0)
   }
   const resetclick = () => {
     setNumber(0)

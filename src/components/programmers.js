@@ -34,7 +34,7 @@ export default function Programmers() {
   
   // We'll have to use the state hook twice, as we need two slices of state.
   // The programmers on the one hand, and the id of the featured programmer on the other.
-  const [string, setstring] = useState(listOfAwesome);
+  const [string, setstring] = useState();
   const getNameOfFeatured = () => {
     // This is not an event handler but a helper function. See its usage below.
     // It's going to need information from both slices of state!
@@ -65,7 +65,6 @@ export default function Programmers() {
   function sixthname() {
 
   }
-
   return (
     <div className="widget-programmers container">
       <h2>Programmers</h2>
@@ -79,7 +78,8 @@ export default function Programmers() {
         <button onClick={sixthname}>{sixth.name}</button>
       </div>
       <div>
-        
+        <div id="blue" style={{ color: "blue"}}>Pick an awesome programmer</div>
+        <div id="yellow" style={{color: "yellow", display: "  "}}>Lets celebrate  {first.name}</div>
       </div>
     </div>
   );
