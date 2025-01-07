@@ -38,15 +38,15 @@ const initialMood = "Not sure how I feel"
 const happyMood = "Quite happy!"
 const sadMood = "Rather sad"
   
-  const [mood, setMood] = useState(initialMood)
-function happyclick () {
-  setMood(happyMood);
+const [mood, setmood] = useState(initialMood)
+function happyclick() {
+  setmood(happyMood)
 }
-function sadclick () {
-  setMood(sadMood);
+function sadclick() {
+  setmood(sadMood)
 }
-function initialclick () {
-  setMood(initialMood);
+function initialclick() {
+  setmood(initialMood)
 }
 
 const style = {
